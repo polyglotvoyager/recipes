@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         );
 
         $command =
-          "tar -czf "
+          "tar --format=gnu -czf "
           . $archive
         . " -C "
         . $posts_dir
