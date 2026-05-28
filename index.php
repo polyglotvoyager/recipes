@@ -105,6 +105,10 @@ usort($posts, function ($a, $b) {
 </p>
 
 <p>
+  <a href="../recipes-hcdocs/">Previous version of Recipes</a>
+</p>
+
+<p>
   <a href="new.php">New recipe (authentication required)</a>
 </p>
 
