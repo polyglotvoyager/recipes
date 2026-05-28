@@ -80,10 +80,6 @@ usort($posts, function ($a, $b) {
 
   <h3>Recipes</h3>
 
-  <p>
-    <a href="recipefiles/heitorchang_recipes.tar.gz">Download Zip of recipes</a>
-  </p>
-
 <?php foreach ($posts as $post): ?>
 
     <div class="post">
@@ -104,6 +100,10 @@ usort($posts, function ($a, $b) {
 <?php endforeach; ?>
 
 <br>
+<p>
+  <a href="recipefiles/heitorchang_recipes.tar.gz">Download Zip of recipes</a>
+</p>
+
 <p>
   <a href="new.php">New recipe (authentication required)</a>
 </p>
