@@ -41,6 +41,45 @@ if (!file_exists($path)) {
 
 file_put_contents($path, $content);
 
+
+// begin zip routine
+
+$posts_dir =
+  escapeshellarg(
+    $config["posts_dir"]
+  );
+
+$archive =
+  escapeshellarg(
+    $config["posts_dir"] . "/heitorchang_recipes.tar.gz"
+  );
+
+$files = glob($config["posts_dir"] . "/*.md");
+
+$escaped_files = array_map(
+  function ($file) use ($posts_dir) {
+
+    return escapeshellarg(
+      basename($file)
+    );
+
+  },
+  $files
+);
+
+$command =
+  "tar --format=ustar -czf "
+  . $archive
+. " -C "
+. $posts_dir
+. " "
+. implode(" ", $escaped_files);
+
+exec($command, $output, $result);
+
+// end zip routine
+
+
 header(
   "Location: read.php?slug="
 . urlencode($slug)
