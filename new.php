@@ -72,7 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $files = glob($config["posts_dir"] . "/*.md");
 
-        var_dump($files);
         $escaped_files = array_map(
           function ($file) use ($posts_dir) {
 
