@@ -24,7 +24,7 @@ sort($files);
     <input
       id="notetokenid"
       name="token"
-      placeholder="Editor token"
+      placeholder="Authentication token"
       required
     >
     <button type="button" onclick="savetoken()">Save token</button>

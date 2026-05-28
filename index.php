@@ -38,7 +38,7 @@ usort($posts, function ($a, $b) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Posts</title>
+    <title>Recipes</title>
 
     <style>
 

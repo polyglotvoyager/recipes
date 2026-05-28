@@ -44,25 +44,29 @@ $content = file_get_contents($path);
       margin: 0.5rem 1rem;
     }
 
-        body {
-            max-width: 800px;
-            margin: 40px auto;
-            font-family: sans-serif;
-            line-height: 1.6;
-        }
+    body {
+      max-width: 800px;
+      margin: 40px auto;
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
 
-        pre {
-            background: #eee;
-            padding: 12px;
-            overflow-x: auto;
-        }
+    pre {
+      background: #eee;
+      padding: 12px;
+      overflow-x: auto;
+    }
 
-        code {
-            font-family: monospace;
-        }
+    code {
+      font-family: monospace;
+    }
 
     #content {
       margin: 1rem;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     </style>
@@ -73,12 +77,20 @@ $content = file_get_contents($path);
     <a href="index.php">All recipes</a>
   </div>
 
-  <br>
-
-  <a id="editlink" href="">Edit recipe</a>
-  (<?= $slug ?>)
+  <p>
+    <strong><?= $slug ?></strong>
+  </p>
 
   <div id="content"></div>
+
+  <p>
+    <a href="recipefiles/<?= $slug ?>.md">View Markdown</a> (<?= $slug ?>)
+  </p>
+
+  <p>
+    <a id="editlink" href="">Edit recipe (authentication required)</a>
+  </p>
+  <br><br><br>
 
   <script>
 
