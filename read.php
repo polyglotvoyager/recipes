@@ -41,7 +41,7 @@ $content = file_get_contents($path);
 
     <style>
     h1, h2, h3, h4 {
-      margin: 0.5rem 1rem;
+      margin: 0.5rem 1rem 0.5rem 0;
     }
 
     body {
